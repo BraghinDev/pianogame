@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Piano game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sound-wrapper">
+      <label for="music-file">Selecione a música para jogar</label>
+      <input type="file" name="music-file" id="music-file" />
+      <div class="game-progress">
+        <h3>Game Progress</h3>
+        <div class="progress">
+          <div class="bar"></div>
+        </div>
+        <span class="percent"></span>
+      </div>
+    </div>
+    <div id="piano" class="piano">
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile main-tile" id="tile-fs"></div>
+      <div class="tile main-tile" id="tile-sc"></div>
+      <div class="tile main-tile" id="tile-td"></div>
+      <div class="tile main-tile" id="tile-ft"></div>
+      <div class="keys">
+        <div class="key">Q</div>
+        <div class="key">W</div>
+        <div class="key">E</div>
+        <div class="key">R</div>
+      </div>
+    </div>
+    <div id="game-stats">
+      <div id="score"></div>
+      <div id="hit"></div>
+      <div id="mistake"></div>
+      <div id="multiplier"></div>
+      <div id="sequence"></div>
+      <div class="instructions">
+        <h4>How to play</h4>
+        <ul>
+          <li>Tap in the black tiles to make points</li>
+          <li>
+            Don't touch in the white tiles, otherwise you will lose points
+          </li>
+          <li>
+            The longer your sequence of hits, the more points you will earn
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <audio src="./music/audio.mpeg" id="music"></audio>
+    <script src="index.js"></script>
+  </body>
+</html>
